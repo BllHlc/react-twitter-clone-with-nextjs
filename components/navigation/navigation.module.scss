@@ -1,0 +1,14 @@
+.nav {
+  button {
+
+    &:first-child {
+      svg {
+        fill: var(--c-theme);
+      }
+    }
+
+    &+button {
+      margin-top: 8px;
+    }
+  }
+}

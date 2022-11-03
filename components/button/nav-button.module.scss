@@ -1,0 +1,52 @@
+.navButton {
+  position: relative;
+  background-color: var(--c-primary);
+  color: var(--c-text-color);
+  padding: 10px;
+  border-radius: 99px;
+  display: flex;
+  align-items: center;
+
+  &:hover {
+    background-color: var(--c-theme-10);
+    color: var(--c-theme);
+
+    svg {
+      fill: var(--c-theme);
+    }
+  }
+
+  svg {
+    font-size: 26px;
+    fill: var(--c-text-color);
+
+    &+* {
+      margin: 0 15px 0 20px;
+    }
+  }
+
+  &.selected {
+    background-color: var(--c-theme);
+    color: var(--c-primary);
+
+    svg {
+      fill: var(--c-primary);
+    }
+  }
+
+  .notify {
+    position: absolute;
+    min-width: 17px;
+    height: 17px;
+    padding: 0 6px;
+    border-radius: 17px;
+    display: flex;
+    align-items: center;
+    left: 20px;
+    top: 5px;
+    background-color: var(--c-theme);
+    color: var(--c-primary);
+    font-size: 11px;
+    border: 1px solid var(--c-primary);
+  }
+}
