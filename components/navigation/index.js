@@ -1,57 +1,45 @@
-import React from "react";
-import NavButton from "../button/nav-button";
-import {
-  Bookmark,
-  Explore,
-  Home,
-  Lists,
-  Messages,
-  More,
-  Notification,
-  Profile,
-  Twitter,
-} from "../icons";
+import { useRouter } from 'next/router';
+import { MENU } from "../../constants";
 import styles from "./navigation.module.scss";
+import cn from "classnames";
+import Link from 'next/link';
 
-const Navigation = (selected) => {
+const Navigation = () => {
+  const router = useRouter();
+
   return (
     <nav className={styles.nav}>
-      <NavButton>
-        <Twitter />
-      </NavButton>
-      <NavButton selected={"home"}>
-        <Home />
-        <span className="titleBold">Home</span>
-      </NavButton>
-      <NavButton selected={selected === "explore"}>
-        <Explore />
-        <span className="titleBold" >Explore</span>
-      </NavButton>
-      <NavButton notify={17} selected={selected === "notification"}>
-        <Notification />
-        <span className="titleBold">Notification</span>
-      </NavButton>
-      <NavButton selected={selected === "messages"}>
-        <Messages />
-        <span className="titleBold">Messages</span>
-      </NavButton>
-      <NavButton selected={selected === "bookmark"}>
-        <Bookmark />
-        <span className="titleBold" >Bookmark</span>
-      </NavButton>
-      <NavButton selected={selected === "list"}>
-        <Lists />
-        <span className="titleBold" >Lists</span>
-      </NavButton>
-      <NavButton selected={selected === "profile"}>
-        <Profile />
-        <span className="titleBold" >Profile</span>
-      </NavButton>
-      <NavButton selected={selected === "more"}>
-        <More />
-        <span className="titleBold" >More</span>
-      </NavButton>
-    </nav>
+      {MENU.map((menu) => {
+        const selected = router.pathname === menu.path;
+        return (
+          <Link
+            key={menu.key}
+            notify={menu.notify}
+            selected={selected}
+            href={menu.path}
+            className={cn(styles.navButton, menu.key)}
+
+          // className={selected ? "selected" : ""}
+          >
+            <div className={styles.buttonContent}>
+              <div className={styles.icon}>
+                {selected ? menu.iconSelected : menu.icon}
+                {menu.notify && (
+                  <span className={styles.notify}>
+                    {menu.notify}
+                  </span>
+                )}
+              </div>
+              {menu.title && (
+                <div className={cn(styles.title, selected ? styles.selectedTitle : "")}>
+                  {menu.title}
+                </div>
+              )}
+            </div>
+          </Link>
+        );
+      })}
+    </nav >
   );
 };
 

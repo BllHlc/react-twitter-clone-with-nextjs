@@ -1,17 +1,14 @@
 import * as React from "react";
 const SvgNotificationFill = (props) => (
   <svg
+    viewBox="0 0 24 24"
+    aria-hidden="true"
+    className="notification-fill_svg__r-18jsvk2 notification-fill_svg__r-4qtqp9 notification-fill_svg__r-yyyyoo notification-fill_svg__r-lwhw9o notification-fill_svg__r-dnmrzs notification-fill_svg__r-bnwqim notification-fill_svg__r-1plcrui notification-fill_svg__r-lrvibr notification-fill_svg__r-cnnz9e"
     width="1em"
     height="1em"
-    viewBox="0 0 24 24"
-    fill="none"
-    xmlns="http://www.w3.org/2000/svg"
     {...props}
   >
-    <path
-      d="M21.697 16.468c-.02-.016-2.14-1.64-2.103-6.03.02-2.533-.812-4.782-2.347-6.334-1.375-1.393-3.237-2.164-5.242-2.172h-.013c-2.004.008-3.866.78-5.242 2.172-1.534 1.553-2.367 3.802-2.346 6.333.037 4.332-2.02 5.967-2.102 6.03a.751.751 0 0 0 .448 1.353h4.494c.1 2.544 2.188 4.587 4.756 4.587s4.655-2.043 4.756-4.587h4.494a.75.75 0 0 0 .447-1.352ZM12 20.408a2.771 2.771 0 0 1-2.756-2.588h5.512A2.772 2.772 0 0 1 12 20.407v.001Z"
-      fill={props.color}
-    />
+    <path d="M11.996 2a8.062 8.062 0 0 0-7.999 7.051L2.866 18H7.1a5.002 5.002 0 0 0 9.8 0h4.236l-1.143-8.958A8.062 8.062 0 0 0 11.996 2zM9.171 18h5.658a3.001 3.001 0 0 1-5.658 0z" />
   </svg>
 );
 export default SvgNotificationFill;

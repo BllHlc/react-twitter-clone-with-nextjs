@@ -1,0 +1,38 @@
+.button {
+  background-color: var(--c-blue);
+  color: #fff;
+  padding-left: 15px;
+  padding-right: 15px;
+  height: 40px;
+  min-width: 40px;
+  font-weight: 700;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 99px;
+  transition: all var(--fade);
+
+  &:hover {
+    background-color: var(--c-blue-dark);
+    color: #fff;
+  }
+}
+
+.bigButton {
+  width: 90%;
+  height: 52px;
+  min-width: 52px;
+  min-height: 52px;
+  margin: 20px 0 16px 0;
+  font-size: 17px;
+
+  @media only screen and (max-width: 1282px) {
+    width: 52px;
+
+    svg {
+      fill: #fff;
+      width: 1.75rem;
+      height: 1.75rem;
+    }
+  }
+}

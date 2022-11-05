@@ -1,0 +1,51 @@
+.box {
+  padding: 10px;
+  margin: auto 0 12px 0;
+  border-radius: 99px;
+  transition: all var(--fade);
+  display: flex;
+  cursor: pointer;
+  justify-content: flex-start;
+  align-items: center;
+
+  &:hover {
+    background-color: var(--c-nav-hover);
+  }
+
+  .info {
+    display: flex;
+    flex-direction: column;
+    margin: 0 12px;
+
+    .name {
+      font-size: 15px;
+      line-height: 20px;
+      font-weight: 700;
+      color: var(--c-text-color);
+    }
+
+    .slug {
+      font-size: 15px;
+      line-height: 20px;
+      font-weight: 400;
+      overflow-wrap: break-word;
+      color: var(--c-gray);
+    }
+  }
+
+  svg {
+    margin-left: auto;
+    fill: var(--c-text-color);
+    font-size: 19px;
+  }
+
+  @media only screen and (max-width: 1300px) {
+    width: fit-content;
+
+    .info,
+    svg {
+      display: none;
+    }
+
+  }
+}

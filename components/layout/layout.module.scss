@@ -1,0 +1,35 @@
+.layout {
+  width: 100vw;
+  min-height: 500vh;
+  display: flex;
+  justify-content: center;
+  user-select: none;
+
+  .header {
+    height: 100%;
+    position: relative;
+    width: 275px;
+
+    @media only screen and (max-width: 1282px) {
+      width: 88px;
+    }
+  }
+
+  .main {
+    display: flex;
+    width: 990px;
+    justify-content: space-between;
+  }
+
+  @media only screen and (max-width: 1116px) {
+    .main {
+      width: 920px;
+    }
+  }
+
+  @media only screen and (max-width: 1026px) {
+    .main {
+      width: 600px;
+    }
+  }
+}

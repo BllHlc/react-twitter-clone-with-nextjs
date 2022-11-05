@@ -1,17 +1,13 @@
 import * as React from "react";
 const SvgListsFill = (props) => (
   <svg
+    viewBox="0 0 24 24"
+    aria-hidden="true"
     width="1em"
     height="1em"
-    viewBox="0 0 24 24"
-    fill="none"
-    xmlns="http://www.w3.org/2000/svg"
     {...props}
   >
-    <path
-      d="M19.75 2H4.25A2.257 2.257 0 0 0 2 4.25v15.5A2.257 2.257 0 0 0 4.25 22h15.5A2.257 2.257 0 0 0 22 19.75V4.25A2.257 2.257 0 0 0 19.75 2ZM11 16.75H7a.75.75 0 0 1 0-1.5h4a.75.75 0 0 1 0 1.5Zm6-4H7a.75.75 0 0 1 0-1.5h10a.75.75 0 0 1 0 1.5Zm0-4H7a.75.75 0 0 1 0-1.5h10a.75.75 0 0 1 0 1.5Z"
-      fill={props.color}
-    />
+    <path d="M18.5 2h-13A2.5 2.5 0 0 0 3 4.5v15A2.5 2.5 0 0 0 5.5 22h13a2.5 2.5 0 0 0 2.5-2.5v-15A2.5 2.5 0 0 0 18.5 2zM16 14H8v-2h8v2zm0-4H8V8h8v2z" />
   </svg>
 );
 export default SvgListsFill;
