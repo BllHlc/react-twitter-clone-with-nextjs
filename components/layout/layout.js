@@ -15,7 +15,13 @@ const Layout = ({ children }) => {
       </div>
       <div className={styles.main}>
         <Main />
-        {size.width > CONST.TABLET_SIZE && (<Extra />)}
+        {
+          size.width > CONST.BREAKPOINT && (
+            <div className={styles.extra}>
+              <Extra />
+            </div>
+          )
+        }
       </div>
     </div>
   );
