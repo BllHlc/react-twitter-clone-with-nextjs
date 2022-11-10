@@ -1,0 +1,88 @@
+.tweetBox {
+  padding: 4px 16px;
+  display: flex;
+
+  .photo {
+    margin-right: 12px;
+    flex-basis: 48px;
+  }
+
+  .form {
+    width: 100%;
+
+    textarea {
+      border: none;
+      resize: none;
+      width: 100%;
+      padding: 12px 0;
+      font-size: 20px;
+      line-height: 24px;
+      font-weight: 400;
+      font-family: inherit;
+      background: var(--c-theme);
+      color: var(--c-text-color);
+
+      &::placeholder {
+        font-size: 20px;
+        line-height: 24px;
+        font-weight: 400;
+        color: var(--c-gray);
+        overflow-wrap: break-word;
+        font-family: inherit;
+      }
+
+      &:focus {
+        outline: none;
+      }
+    }
+
+    footer {
+      display: flex;
+      justify-content: space-between;
+      margin-top: 12px;
+
+      .icons {
+        display: flex;
+
+
+
+        .icon {
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          fill: var(--c-primary);
+          font-size: 20px;
+          cursor: pointer;
+          min-height: 35px;
+          min-width: 35px;
+
+          &:first-child {
+            margin-left: -8px;
+          }
+
+          &:hover {
+            background: var(--c-theme-hover);
+            border-radius: 9999px;
+          }
+        }
+      }
+
+      .tweetButton {
+        height: 36px;
+        padding: 0 16px;
+        font-size: 15px;
+        letter-spacing: 0.8px;
+
+        &:disabled {
+          opacity: 0.5;
+          cursor: default;
+
+          &:hover {
+            background-color: var(--c-primary);
+          }
+        }
+      }
+    }
+  }
+
+}

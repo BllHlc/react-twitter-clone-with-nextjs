@@ -9,6 +9,7 @@
     height: 100%;
     position: relative;
     width: 275px;
+    z-index: 4;
 
     @media only screen and (max-width: 1282px) {
       width: 88px;
@@ -19,6 +20,7 @@
     display: flex;
     width: 990px;
     justify-content: space-between;
+    overflow: hidden;
   }
 
   @media only screen and (max-width: 1116px) {
@@ -29,7 +31,8 @@
 
   @media only screen and (max-width: 1026px) {
     .main {
-      width: 600px;
+      max-width: 600px;
+      flex: 1
     }
   }
 }

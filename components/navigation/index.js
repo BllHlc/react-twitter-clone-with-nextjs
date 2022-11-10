@@ -3,9 +3,14 @@ import { MENU } from "../../constants";
 import styles from "./navigation.module.scss";
 import cn from "classnames";
 import Link from 'next/link';
+import * as Icon from '../icons';
+import ThemeSelect from '../theme-select';
+import { useState } from 'react';
 
 const Navigation = () => {
+  const [showModel, setShowModel] = useState(false);
   const router = useRouter();
+  useState;
 
   return (
     <nav className={styles.nav}>
@@ -18,8 +23,6 @@ const Navigation = () => {
             selected={selected}
             href={menu.path}
             className={cn(styles.navButton, menu.key)}
-
-          // className={selected ? "selected" : ""}
           >
             <div className={styles.buttonContent}>
               <div className={styles.icon}>
@@ -39,6 +42,19 @@ const Navigation = () => {
           </Link>
         );
       })}
+      <button className={cn(styles.navButton, "more")}
+        onClick={() => setShowModel(true)}
+      >
+        <div className={styles.buttonContent}>
+          <div className={styles.icon}>
+            <Icon.More />
+          </div>
+          <div className={styles.title}>More</div>
+        </div>
+      </button>
+      {
+        showModel && <ThemeSelect onClose={() => setShowModel(false)} />
+      }
     </nav >
   );
 };

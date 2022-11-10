@@ -1,12 +1,24 @@
 import styles from '../styles/Home.module.scss';
-import { ArrowDown, Bookmark } from "../components/icons";
-import Navigation from '../components/navigation';
 import Layout from '../components/layout/layout';
+import { TimelineProp } from '../components/icons';
+import TweetBox from '../components/tweet-box';
 
 export default function Home() {
   return (
-    <div className={styles.container}>
-      <Layout />
-    </div>
+    <Layout >
+      <div className={styles.main}>
+        <div className={styles.content}>
+          <div className={styles.title}>
+            <h2>Home</h2>
+            <span className={styles.icon}>
+              <TimelineProp />
+            </span>
+          </div>
+          <div className={styles.main}>
+            <TweetBox />
+          </div>
+        </div>
+      </div>
+    </Layout>
   );
 }

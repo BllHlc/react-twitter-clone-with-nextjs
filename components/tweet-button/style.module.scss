@@ -1,5 +1,5 @@
 .button {
-  background-color: var(--c-blue);
+  background-color: var(--c-primary);
   color: #fff;
   padding-left: 15px;
   padding-right: 15px;
@@ -11,9 +11,12 @@
   align-items: center;
   border-radius: 99px;
   transition: all var(--fade);
+  width: fit-content;
+  border: none;
+  cursor: pointer;
 
   &:hover {
-    background-color: var(--c-blue-dark);
+    background-color: var(--c-primary-dark);
     color: #fff;
   }
 }

@@ -1,7 +1,7 @@
 import React from 'react';
 import cn from 'classnames';
 
-import styles from './style.module.css';
+import styles from './style.module.scss';
 
 const Photo = ({
   src = 'https://avatars2.githubusercontent.com/u/187922?s=200',

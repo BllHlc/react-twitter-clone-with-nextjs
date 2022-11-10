@@ -72,13 +72,47 @@ export const MENU = [
     iconSelected: <Icon.ProfileFill />,
     title: 'Profile',
     notify: ""
+  }
+];
+
+export const THEMES = [
+  {
+    name: "default",
+    label: "Default",
   },
   {
-    key: 'more',
-    path: '#',
-    icon: <Icon.More />,
-    iconSelected: <Icon.More />,
-    title: 'More',
-    notify: ""
+    name: "dim",
+    label: "Dim",
+  },
+  {
+    name: "lights-out",
+    label: "Lights Out",
+  }
+];
+
+export const COLORS = [
+  {
+    name: "blue",
+    color: "#1d9bf0",
+  },
+  {
+    name: "yellow",
+    color: "#ffd400",
+  },
+  {
+    name: "pink",
+    color: "#f91880",
+  },
+  {
+    name: "purple",
+    color: "#7856ff",
+  },
+  {
+    name: "orange",
+    color: "#ff7a00",
+  },
+  {
+    name: "green",
+    color: "#00ba7c",
   }
 ];

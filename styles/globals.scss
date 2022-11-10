@@ -1,18 +1,139 @@
 :root {
-  --c-blue: rgb(29, 155, 240);
-  --c-blue-dark: rgb(26, 140, 216);
+  --c-primary: rgb(29, 155, 240);
+  --c-primary-dark: rgb(26, 140, 216);
   --c-text-color: rgb(15, 20, 25);
   --c-theme: rgb(255, 255, 255);
+  --c-theme-light: rgba(255, 255, 255, 0.85);
   --c-theme-hover: rgba(29, 155, 240, 0.1);
   --c-nav-hover: rgba(15, 25, 25, 0.1);
   --c-gray: rgb(83, 100, 113);
+  --c-border: rgb(239, 243, 244);
+  --c-overlay: rgba(0, 0, 0, 0.4);
+  --c-bg-secondary: rgb(247, 249, 249);
 
   --fade: 120ms;
   --d: 1282px;
   --t: 1026px;
   --m: 500px;
+
+  &.blue {
+    --c-primary: #1d9bf0;
+    --c-primary-dark: #1a8cd8;
+  }
+
+  &.yellow {
+    --c-primary: #ffd400;
+    --c-primary-dark: #e6b800;
+  }
+
+  &.pink {
+    --c-primary: #f91880;
+    --c-primary-dark: #e31572;
+  }
+
+  &.purple {
+    --c-primary: #7856ff;
+    --c-primary-dark: #6b4eeb;
+  }
+
+  &.orange {
+    --c-primary: #ff7a00;
+    --c-primary-dark: #e66a00;
+  }
+
+  &.green {
+    --c-primary: #00ba7c;
+    --c-primary-dark: #00a46c;
+  }
 }
 
+.dim:root {
+  --c-primary: rgb(29, 155, 240);
+  --c-primary-dark: rgb(26, 140, 216);
+  --c-text-color: rgb(247, 249, 249);
+  --c-theme: rgb(21, 32, 43);
+  --c-theme-light: rgba(21, 32, 43, 0.85);
+  --c-theme-hover: rgba(29, 155, 240, 0.1);
+  --c-nav-hover: rgba(247, 249, 249, 0.1);
+  --c-gray: rgb(139, 152, 165);
+  --c-border: rgb(56, 68, 77);
+  --c-overlay: rgba(91, 112, 131, 0.4);
+  --c-bg-secondary: rgb(30, 39, 50);
+
+  &.blue {
+    --c-primary: #1d9bf0;
+    --c-primary-dark: #1a8cd8;
+  }
+
+  &.yellow {
+    --c-primary: #ffd400;
+    --c-primary-dark: #e6b800;
+  }
+
+  &.pink {
+    --c-primary: #f91880;
+    --c-primary-dark: #e31572;
+  }
+
+  &.purple {
+    --c-primary: #7856ff;
+    --c-primary-dark: #6b4eeb;
+  }
+
+  &.orange {
+    --c-primary: #ff7a00;
+    --c-primary-dark: #e66a00;
+  }
+
+  &.green {
+    --c-primary: #00ba7c;
+    --c-primary-dark: #00a46c;
+  }
+}
+
+.lights-out:root {
+  --c-primary: rgb(29, 155, 240);
+  --c-primary-dark: rgb(26, 140, 216);
+  --c-text-color: rgb(231, 233, 234);
+  --c-theme: rgb(0, 0, 0);
+  --c-theme-light: rgba(0, 0, 0, 0.85);
+  --c-theme-hover: rgba(29, 155, 240, 0.1);
+  --c-nav-hover: rgba(231, 233, 234, 0.1);
+  --c-gray: rgb(113, 118, 123);
+  --c-border: rgb(47, 51, 54);
+  --c-overlay: rgba(91, 112, 131, 0.4);
+  --c-bg-secondary: rgb(22, 24, 28);
+
+  &.blue {
+    --c-primary: #1d9bf0;
+    --c-primary-dark: #1a8cd8;
+  }
+
+  &.yellow {
+    --c-primary: #ffd400;
+    --c-primary-dark: #e6b800;
+  }
+
+  &.pink {
+    --c-primary: #f91880;
+    --c-primary-dark: #e31572;
+  }
+
+  &.purple {
+    --c-primary: #7856ff;
+    --c-primary-dark: #6b4eeb;
+  }
+
+  &.orange {
+    --c-primary: #ff7a00;
+    --c-primary-dark: #e66a00;
+  }
+
+  &.green {
+    --c-primary: #00ba7c;
+    --c-primary-dark: #00a46c;
+  }
+}
 
 html,
 body {
@@ -21,6 +142,7 @@ body {
   font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
     Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
   font-size: 15px;
+  background: var(--c-theme);
   overflow-x: hidden;
 }
 

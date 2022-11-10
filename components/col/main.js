@@ -1,10 +1,10 @@
 import React from 'react';
 import styles from "./main.module.scss";
 
-const Main = () => {
+const Main = ({ children }) => {
   return (
     <div className={styles.main}>
-      Main
+      {children}
     </div>
   );
 };

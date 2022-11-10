@@ -6,19 +6,21 @@ import CONST from '../../constants';
 import { Tweet } from '../icons';
 
 function TweetButton({ className, children, big = false, ...props }) {
+  const [isMobile, setIsMobile] = React.useState(false);
   const size = useWindowSize();
 
+  React.useEffect(() => {
+    size.width > CONST.DESKTOP_SIZE ? setIsMobile(false) : setIsMobile(true);
+  }, [size.width]);
+
+
   return (
-    <div
+    <button
       className={cn(styles.button, big && styles.bigButton, className)}
       {...props}
     >
-      {
-        size.width < CONST.DESKTOP_SIZE ?
-          <Tweet className={styles.icon} /> :
-          children
-      }
-    </div>
+      {isMobile && big ? <Tweet /> : children}
+    </button>
   );
 }
 

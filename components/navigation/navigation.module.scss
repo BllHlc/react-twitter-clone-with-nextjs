@@ -1,13 +1,35 @@
 .nav {
   display: flex;
   flex-direction: column;
+  position: relative;
 
   .navButton {
     width: fit-content;
 
+    &:global(.more) {
+      border: none;
+      background: none;
+    }
+
     .buttonContent {
       display: flex;
       border-radius: 99px;
+
+      .icon {
+        display: flex;
+      }
+    }
+
+    &:global(.twitter) {
+      svg {
+        fill: #1da1f2;
+      }
+
+      :global(html:not(.default)) & {
+        svg {
+          fill: rgb(255, 255, 255)
+        }
+      }
     }
 
     &:first-child {
@@ -27,7 +49,7 @@
     }
 
     svg {
-      fill: var(--c-blue);
+      fill: var(--c-primary);
       font-size: 30px;
     }
 
@@ -62,7 +84,7 @@
             line-height: 16px;
             display: flex;
             align-items: center;
-            background-color: var(--c-blue);
+            background-color: var(--c-primary);
             color: var(--c-theme);
             font-size: 11px;
             border: 1px solid var(--c-theme);
