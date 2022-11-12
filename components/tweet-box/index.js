@@ -12,7 +12,7 @@ const TweetBox = () => {
       </div>
       <div className={styles.form}>
         <form>
-          <TextareaAutosize placeholder="What's happening?" maxLength="280" />
+          <TextareaAutosize placeholder="What’s happening?" maxLength="280" />
           <footer>
             <div className={styles.icons}>
               <div className={styles.icon}>

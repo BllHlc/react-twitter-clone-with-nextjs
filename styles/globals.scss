@@ -10,41 +10,12 @@
   --c-border: rgb(239, 243, 244);
   --c-overlay: rgba(0, 0, 0, 0.4);
   --c-bg-secondary: rgb(247, 249, 249);
+  --c-box-background: rgb(239, 243, 244);
 
   --fade: 120ms;
   --d: 1282px;
   --t: 1026px;
   --m: 500px;
-
-  &.blue {
-    --c-primary: #1d9bf0;
-    --c-primary-dark: #1a8cd8;
-  }
-
-  &.yellow {
-    --c-primary: #ffd400;
-    --c-primary-dark: #e6b800;
-  }
-
-  &.pink {
-    --c-primary: #f91880;
-    --c-primary-dark: #e31572;
-  }
-
-  &.purple {
-    --c-primary: #7856ff;
-    --c-primary-dark: #6b4eeb;
-  }
-
-  &.orange {
-    --c-primary: #ff7a00;
-    --c-primary-dark: #e66a00;
-  }
-
-  &.green {
-    --c-primary: #00ba7c;
-    --c-primary-dark: #00a46c;
-  }
 }
 
 .dim:root {
@@ -59,36 +30,7 @@
   --c-border: rgb(56, 68, 77);
   --c-overlay: rgba(91, 112, 131, 0.4);
   --c-bg-secondary: rgb(30, 39, 50);
-
-  &.blue {
-    --c-primary: #1d9bf0;
-    --c-primary-dark: #1a8cd8;
-  }
-
-  &.yellow {
-    --c-primary: #ffd400;
-    --c-primary-dark: #e6b800;
-  }
-
-  &.pink {
-    --c-primary: #f91880;
-    --c-primary-dark: #e31572;
-  }
-
-  &.purple {
-    --c-primary: #7856ff;
-    --c-primary-dark: #6b4eeb;
-  }
-
-  &.orange {
-    --c-primary: #ff7a00;
-    --c-primary-dark: #e66a00;
-  }
-
-  &.green {
-    --c-primary: #00ba7c;
-    --c-primary-dark: #00a46c;
-  }
+  --c-box-background: rgb(39, 51, 64);
 }
 
 .lights-out:root {
@@ -103,35 +45,46 @@
   --c-border: rgb(47, 51, 54);
   --c-overlay: rgba(91, 112, 131, 0.4);
   --c-bg-secondary: rgb(22, 24, 28);
+  --c-box-background: rgb(28, 31, 35);
+}
 
+:root,
+.dim:root,
+.lights-out:root {
   &.blue {
     --c-primary: #1d9bf0;
     --c-primary-dark: #1a8cd8;
+    --c-theme-hover: rgba(29, 155, 240, 0.1);
   }
 
   &.yellow {
     --c-primary: #ffd400;
     --c-primary-dark: #e6b800;
+    --c-theme-hover: rgba(255, 212, 0, 0.1);
   }
 
   &.pink {
     --c-primary: #f91880;
     --c-primary-dark: #e31572;
+    --c-theme-hover: rgba(249, 24, 128, 0.1);
   }
 
   &.purple {
     --c-primary: #7856ff;
     --c-primary-dark: #6b4eeb;
+    --c-theme-hover: rgba(120, 86, 255, 0.1);
   }
 
   &.orange {
     --c-primary: #ff7a00;
     --c-primary-dark: #e66a00;
+    --c-theme-hover: rgba(255, 122, 0, 0.1);
   }
 
   &.green {
     --c-primary: #00ba7c;
     --c-primary-dark: #00a46c;
+    --c-theme-hover: rgba(0, 186, 124, 0.1);
   }
 }
 

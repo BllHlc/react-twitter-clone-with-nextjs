@@ -1,8 +1,8 @@
 import React from 'react';
 import styles from "./layout.module.scss";
-import Header from '../col/header';
+import Sidebar from '../col/sidebar';
 import Main from '../col/main';
-import Extra from '../col/extra';
+import Aside from '../col/aside';
 import useWindowSize from '../../hooks/useWindowSize';
 import CONST from '../../constants';
 
@@ -17,11 +17,11 @@ const Layout = ({ children }) => {
   return (
     <div className={styles.layout}>
       <div className={styles.header}>
-        <Header />
+        <Sidebar />
       </div>
       <div className={styles.main}>
         <Main>{children}</Main>
-        {!isMobile && <Extra />}
+        {!isMobile && <Aside />}
       </div>
     </div>
   );

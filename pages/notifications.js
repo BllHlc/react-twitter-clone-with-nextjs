@@ -1,10 +1,11 @@
 import React from 'react';
+import Header from '../components/header';
 import Layout from '../components/layout/layout';
 
 const Notifications = () => {
   return (
     <Layout>
-      Notifications
+      <Header text={"Notifications"} />
     </Layout>
   );
 };

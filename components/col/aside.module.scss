@@ -1,0 +1,82 @@
+.aside {
+  width: 350px;
+  margin-right: 10px;
+  padding-top: 12px;
+  position: relative;
+  z-index: 1;
+
+  .search {
+    display: flex;
+    min-height: 32px;
+    align-items: center;
+    height: 53px;
+    z-index: 2;
+    position: fixed;
+    width: 350px;
+    top: 0;
+    margin-bottom: 12px;
+    background: var(--c-theme);
+
+    label {
+      background: var(--c-box-background);
+      width: 100%;
+      min-height: 42px;
+      display: flex;
+      align-items: center;
+      border-radius: 99px;
+      border: 1px solid var(--c-box-background);
+
+      .icon {
+        width: 44px;
+        display: flex;
+        align-items: center;
+
+        svg {
+          margin-left: 12px;
+          fill: var(--c-gray);
+          width: 44px;
+          height: 19px;
+        }
+      }
+
+      .input {
+        width: 100%;
+        height: 100%;
+        padding: 0 12px;
+        border: none;
+        background: transparent;
+        color: var(--c-text-color);
+        font-size: 16px;
+        font-weight: 500;
+        line-height: 19px;
+        outline: none;
+      }
+
+      &:focus-within {
+        border: 1px solid var(--c-primary);
+        background: var(--c-theme);
+
+        .icon {
+          svg {
+            fill: var(--c-primary);
+          }
+        }
+      }
+    }
+  }
+
+  .timeline {
+    margin-top: 55px;
+    position: fixed;
+    width: 350px;
+  }
+
+  @media only screen and (max-width: 1116px) {
+    width: 290px;
+
+    .search,
+    .timeline {
+      width: 290px;
+    }
+  }
+}

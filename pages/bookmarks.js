@@ -1,9 +1,12 @@
 import React from 'react';
+import Header from '../components/header';
 import Layout from '../components/layout/layout';
 
 const Bookmarks = () => {
   return (
-    <Layout>Bookmarks</Layout>
+    <Layout>
+      <Header text={"Bookmarks"} />
+    </Layout>
   );
 };
 
