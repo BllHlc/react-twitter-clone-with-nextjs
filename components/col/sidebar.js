@@ -10,6 +10,8 @@ import { useMainContext } from '../../context';
 const Header = () => {
   const [showModal, setShowModal] = useState(false);
   const { user } = useMainContext();
+  const { logout } = useMainContext();
+
 
   return (
     <div className={styles.sidebar}>
@@ -31,11 +33,13 @@ const Header = () => {
         user &&
         <>
           <TweetButton big onClick={() => setShowModal(true)}>Tweet</TweetButton>
-          <ProfileBox
-            name={user.displayName}
-            slug={user.displayName.split(" ")[0]}
-            img={user.photoURL}
-          />
+          <button className={styles.logout} onClick={logout}>
+            <ProfileBox
+              name={user.displayName}
+              slug={user.displayName.split(" ")[0]}
+              img={user.photoURL}
+            />
+          </button>
         </>
       }
     </div>

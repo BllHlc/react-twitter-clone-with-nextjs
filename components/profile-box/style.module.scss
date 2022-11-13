@@ -5,8 +5,8 @@
   transition: all var(--fade);
   display: flex;
   cursor: pointer;
-  justify-content: flex-start;
   align-items: center;
+  width: 100%;
 
   &:hover {
     background-color: var(--c-nav-hover);
@@ -30,6 +30,7 @@
       font-weight: 400;
       overflow-wrap: break-word;
       color: var(--c-gray);
+      align-self: flex-start;
     }
   }
 

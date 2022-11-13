@@ -71,6 +71,15 @@
     }
   }
 
+  .logout {
+    border-radius: 99px;
+    margin-top: auto;
+    display: flex;
+    align-items: center;
+    border: none;
+    background: none;
+  }
+
   @media only screen and (max-width: 1282px) {
     width: 88px;
   }
