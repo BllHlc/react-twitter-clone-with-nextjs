@@ -5,7 +5,7 @@ import useWindowSize from '../../hooks/useWindowSize';
 import CONST from '../../constants';
 import { Tweet } from '../icons';
 
-function TweetButton({ className, children, big = false, ...props }) {
+function TweetButton({ className, disabled = false, children, big = false, ...props }) {
   const [isMobile, setIsMobile] = React.useState(false);
   const size = useWindowSize();
 
@@ -17,6 +17,7 @@ function TweetButton({ className, children, big = false, ...props }) {
   return (
     <button
       className={cn(styles.button, big && styles.bigButton, className)}
+      disabled={disabled}
       {...props}
     >
       {isMobile && big ? <Tweet /> : children}

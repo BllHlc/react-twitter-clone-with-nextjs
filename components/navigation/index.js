@@ -6,15 +6,22 @@ import Link from 'next/link';
 import * as Icon from '../icons';
 import ThemeSelect from '../theme-select';
 import { useState } from 'react';
+import { useMainContext } from '../../context';
 
 const Navigation = () => {
   const [showModel, setShowModel] = useState(false);
   const router = useRouter();
-  useState;
+  const { login } = useMainContext();
+  const navList = MENU.filter((item) => {
+    if (!login) {
+      return item.key === "twitter" || item.key === "home" || item.key === "explore";
+    }
+    return true;
+  });
 
   return (
     <nav className={styles.nav}>
-      {MENU.map((menu) => {
+      {navList.map((menu) => {
         const selected = router.pathname === menu.path;
         return (
           <Link

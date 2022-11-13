@@ -1,0 +1,64 @@
+.loginBox {
+  position: fixed;
+  border: 1px solid var(--c-border);
+  border-radius: 16px;
+  width: 350px;
+
+  .header {
+    .title {
+      font-size: 24px;
+      font-weight: 800;
+      color: var(--c-text-color);
+      padding: 12px 16px;
+      margin: 0;
+    }
+
+    .text {
+      font-size: 13px;
+      color: var(--c-gray);
+      padding: 0 12px;
+      margin: 0;
+    }
+  }
+
+  .buttons {
+    display: flex;
+    flex-direction: column;
+    margin: 16px 12px;
+
+    .button {
+      cursor: pointer;
+      width: 100%;
+      max-width: 300px;
+      border: none;
+      height: 40px;
+      border-radius: 99px;
+      font-size: 15px;
+      line-height: 20px;
+      font-weight: 700;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+
+      &:not(:last-child) {
+        margin-bottom: 12px;
+      }
+
+      &:hover {
+        background: rgb(230, 230, 230);
+      }
+
+      svg {
+        width: 18px;
+        height: 18px;
+        margin-right: 8px;
+      }
+    }
+  }
+
+  @media only screen and (max-width: 1116px) {
+    width: 290px;
+
+
+  }
+}

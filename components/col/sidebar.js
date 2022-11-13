@@ -5,14 +5,15 @@ import ProfileBox from '../profile-box';
 import styles from "./sidebar.module.scss";
 import TweetBox from '../tweet-box';
 import { Close } from '../icons';
+import { useMainContext } from '../../context';
 
 const Header = () => {
   const [showModal, setShowModal] = useState(false);
+  const { user } = useMainContext();
 
   return (
     <div className={styles.sidebar}>
       <Navigation />
-      <TweetButton big onClick={() => setShowModal(true)}>Tweet</TweetButton>
       {
         showModal && (
           <div className={styles.modal}>
@@ -26,7 +27,17 @@ const Header = () => {
           </div>
         )
       }
-      <ProfileBox />
+      {
+        user &&
+        <>
+          <TweetButton big onClick={() => setShowModal(true)}>Tweet</TweetButton>
+          <ProfileBox
+            name={user.displayName}
+            slug={user.displayName.split(" ")[0]}
+            img={user.photoURL}
+          />
+        </>
+      }
     </div>
   );
 };

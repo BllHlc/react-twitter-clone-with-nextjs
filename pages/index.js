@@ -5,7 +5,7 @@ import Header from '../components/header';
 
 export default function Home() {
   return (
-    <Layout >
+    <Layout>
       <div className={styles.main}>
         <div className={styles.content}>
           <Header text={"Home"} />
