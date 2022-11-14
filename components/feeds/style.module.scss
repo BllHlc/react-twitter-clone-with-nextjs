@@ -1,8 +1,37 @@
 .feeds {
   .feed {
+    padding: 12px;
+    border-bottom: 1px solid var(--c-border);
+    color: var(--c-text-color);
+
     .header {
       .left {
         display: flex;
+        align-items: center;
+
+        .name {
+          display: flex;
+          margin: 0 10px;
+          color: inherit;
+
+          div {
+            margin: 0 5px;
+            color: inherit;
+
+            &:first-child {
+              font-weight: 700;
+            }
+          }
+
+          .icon {
+            fill: rgb(29, 155, 240);
+
+            svg {
+              width: 20px;
+              height: 20px;
+            }
+          }
+        }
       }
     }
   }

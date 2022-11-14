@@ -2,10 +2,11 @@ import React from 'react';
 import styles from './style.module.scss';
 import { useMainContext } from '../../context';
 import Image from 'next/image';
+import { BlueTick } from '../icons';
 
 const Feeds = () => {
   const { tweets } = useMainContext();
-  tweets.sort((a, b) => b.date - a.date);
+  tweets?.sort((a, b) => b.date - a.date);
 
   return (
     <div className={styles.feeds}>
@@ -23,6 +24,9 @@ const Feeds = () => {
                 />
                 <div className={styles.name}>
                   <div>{tweet.user}</div>
+                  <span className={styles.icon}>
+                    <BlueTick />
+                  </span>
                   <div>@{tweet.slug}</div>
                 </div>
               </div>

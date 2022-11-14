@@ -1,4 +1,5 @@
 export { default as ArrowDown } from "./ArrowDown";
+export { default as BlueTick } from "./BlueTick";
 export { default as BookmarkFill } from "./BookmarkFill";
 export { default as Bookmark } from "./Bookmark";
 export { default as Circle } from "./Circle";
