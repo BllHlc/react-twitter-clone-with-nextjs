@@ -1,6 +1,7 @@
 .tweetBox {
-  padding: 4px 16px;
+  padding: 4px 16px 12px;
   display: flex;
+  border-bottom: 1px solid var(--c-border);
 
   .photo {
     margin-right: 12px;

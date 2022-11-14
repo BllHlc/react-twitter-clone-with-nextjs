@@ -25,7 +25,7 @@
         fill: #1da1f2;
       }
 
-      :global(html:not(.default)) & {
+      :global(html:not(.default, .null)) & {
         svg {
           fill: rgb(255, 255, 255)
         }

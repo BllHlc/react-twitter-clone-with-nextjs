@@ -1,7 +1,7 @@
 import { createContext, useContext, useEffect, useState } from "react";
 import { getAuth, GoogleAuthProvider, signInWithPopup, signOut } from "firebase/auth";
 import { app, auth, database } from "../constants/firebase";
-import { getDatabase, ref, set } from "firebase/database";
+import { getDatabase, ref, set, onValue, serverTimestamp, orderByValue, query } from "firebase/database";
 
 
 const MainContext = createContext();
@@ -70,8 +70,36 @@ const MainContextProvider = ({ children }) => {
     });
   };
 
+  const addTweet = (tweet) => {
+    const newTweet = {
+      timestamp: serverTimestamp(),
+      tweet,
+      userId: user.uid,
+      user: user.displayName,
+      photo: user.photoURL,
+      date: new Date().toLocaleString(),
+      likes: 0,
+      comments: 0,
+      retweets: 0,
+      slug: user.displayName.replace(/ /g, "-").toLowerCase(),
+      date: Date.now(),
+    };
+    console.log(newTweet);
+    set(ref(database, "tweets/" + newTweet.date), newTweet);
+  };
 
-
+  useEffect(() => {
+    const dbRef = query(ref(database, "tweets"), orderByValue("timestamp", "desc"));
+    onValue(dbRef, (snapshot) => {
+      const data = snapshot.val();
+      const tweets = [];
+      for (let key in data) {
+        tweets.push({ ...data[key], id: key });
+      }
+      setTweets(tweets);
+      console.log(tweets);
+    });
+  }, []);
 
   const value = {
     colors,
@@ -84,9 +112,10 @@ const MainContextProvider = ({ children }) => {
     loginWithGoogle,
     logout,
     user,
-    setUser
-
-
+    setUser,
+    addTweet,
+    tweets,
+    setTweets,
   };
 
   return (

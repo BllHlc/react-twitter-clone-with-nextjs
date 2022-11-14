@@ -36,7 +36,7 @@ const Header = () => {
           <button className={styles.logout} onClick={logout}>
             <ProfileBox
               name={user.displayName}
-              slug={user.displayName.split(" ")[0]}
+              slug={user.displayName.replace(/ /g, "-").toLowerCase()}
               img={user.photoURL}
             />
           </button>

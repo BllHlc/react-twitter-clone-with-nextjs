@@ -1,22 +1,22 @@
-import { useEffect, useState } from 'react';
-import { writeUserData } from "../../constants/firebase";
-
-
+import { useState } from 'react';
 import styles from './style.module.scss';
 import TextareaAutosize from 'react-textarea-autosize';
 import { Media, Gif, Poll, Emoji, Schedule, Location } from "../icons";
 import TweetButton from '../tweet-button';
 import Photo from '../photo';
+import { useMainContext } from "../../context";
 
 const TweetBox = () => {
   const [tweets, setTweets] = useState([]);
+  const { addTweet } = useMainContext();
 
   const handleAddTweet = async (e) => {
     e.preventDefault();
-    // writeUserData("2", "bilal", "test@test.com", "test123", tweets);
+    const input = e.target.elements[0];
+    const tweet = input.value;
+    addTweet(tweet);
     setTweets("");
   };
-
 
   return (
     <div className={styles.tweetBox}>

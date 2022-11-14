@@ -14,9 +14,9 @@ const ProfileBox = ({ flat = false, name = 'Bilal Halıcı', slug = 'bllhlc', im
         <span className={styles.name}>{name}</span>
         <span className={styles.slug}>@{slug}</span>
       </div>
-      <button className={styles.button}>
+      <div className={styles.button}>
         <TreeDot />
-      </button>
+      </div>
     </div>
   );
 };

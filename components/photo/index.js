@@ -2,6 +2,7 @@ import React from 'react';
 import cn from 'classnames';
 import styles from './style.module.scss';
 import { useMainContext } from '../../context';
+import Image from 'next/image';
 
 const Photo = ({
   src = 'https://avatars2.githubusercontent.com/u/187922?s=200',
@@ -13,7 +14,7 @@ const Photo = ({
 
   return (
     <div className={cn([styles.photo])} style={{ width: size, height: size }}>
-      <img className={styles.img} src={src} alt={alt} />
+      <Image src={src} alt={alt} width={size} height={size} style={{ borderRadius: '99px' }} />
     </div>
   );
 };
