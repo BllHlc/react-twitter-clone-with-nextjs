@@ -158,7 +158,11 @@
 
 
           &.checked {
-            border-color: rgb(29, 155, 240) !important;
+            border-color: var(--c-primary) !important;
+
+            input[type="radio"] {
+              accent-color: var(--c-primary);
+            }
           }
 
 

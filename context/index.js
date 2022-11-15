@@ -3,7 +3,6 @@ import { getAuth, GoogleAuthProvider, signInWithPopup, signOut } from "firebase/
 import { app, auth, database } from "../constants/firebase";
 import { getDatabase, ref, set, onValue, serverTimestamp, orderByValue, query } from "firebase/database";
 
-
 const MainContext = createContext();
 
 const MainContextProvider = ({ children }) => {
@@ -70,10 +69,11 @@ const MainContextProvider = ({ children }) => {
     });
   };
 
-  const addTweet = (tweet) => {
+  const addTweet = (tweet, image) => {
     const newTweet = {
       timestamp: serverTimestamp(),
       tweet,
+      image: image,
       userId: user.uid,
       user: user.displayName,
       photo: user.photoURL,
@@ -81,8 +81,8 @@ const MainContextProvider = ({ children }) => {
       likes: 0,
       comments: 0,
       retweets: 0,
-      slug: user.displayName.replace(/ /g, "-").toLowerCase(),
-      date: Date.now(),
+      slug: user.displayName.replace(/ /g, "_").toLowerCase(),
+      date: Date.now()
     };
     console.log(newTweet);
     set(ref(database, "tweets/" + newTweet.date), newTweet);
@@ -97,7 +97,6 @@ const MainContextProvider = ({ children }) => {
         tweets.push({ ...data[key], id: key });
       }
       setTweets(tweets);
-      console.log(tweets);
     });
   }, []);
 

@@ -6,7 +6,7 @@ import Image from 'next/image';
 
 const Photo = ({
   src = 'https://avatars2.githubusercontent.com/u/187922?s=200',
-  alt,
+  alt = 'user photo',
   size = 47
 }) => {
   const { user } = useMainContext();

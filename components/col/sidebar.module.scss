@@ -9,6 +9,7 @@
   display: flex;
   flex-direction: column;
   overflow-y: auto;
+  overflow-x: hidden;
 
   .modal {
     position: fixed;
@@ -78,6 +79,7 @@
     align-items: center;
     border: none;
     background: none;
+    padding: 0;
   }
 
   @media only screen and (max-width: 1282px) {
