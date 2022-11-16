@@ -7,8 +7,9 @@ import useWindowSize from '../../hooks/useWindowSize';
 import CONST from '../../constants';
 import { Timeline } from 'react-twitter-widgets';
 import { useMainContext } from '../../context';
+import Head from 'next/head';
 
-const Layout = ({ children }) => {
+const Layout = ({ children, title = "Öz Twitter" }) => {
   const [isMobile, setIsMobile] = React.useState(false);
   const size = useWindowSize();
   const { login } = useMainContext();
@@ -19,6 +20,10 @@ const Layout = ({ children }) => {
 
   return (
     <div className={styles.layout}>
+      <Head>
+        <title>{title}</title>
+        <meta name="viewport" content="initial-scale=1.0, width=device-width" />
+      </Head>
       <div className={styles.header}>
         <Sidebar />
       </div>

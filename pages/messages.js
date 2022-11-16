@@ -4,7 +4,7 @@ import Layout from '../components/layout/layout';
 
 const Messages = () => {
   return (
-    <Layout>
+    <Layout title="Messages / Öz Twitter">
       <Header text={"Messages"} />
     </Layout>
   );

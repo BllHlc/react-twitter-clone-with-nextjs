@@ -4,7 +4,7 @@ import Layout from '../components/layout/layout';
 
 const Profile = () => {
   return (
-    <Layout>
+    <Layout title="Profile / Öz Twitter">
       <Header text={"Profile"} />
     </Layout>
   );
