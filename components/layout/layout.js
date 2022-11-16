@@ -9,7 +9,7 @@ import { Timeline } from 'react-twitter-widgets';
 import { useMainContext } from '../../context';
 import Head from 'next/head';
 
-const Layout = ({ children, title = "Öz Twitter" }) => {
+const Layout = ({ children, title }) => {
   const [isMobile, setIsMobile] = React.useState(false);
   const size = useWindowSize();
   const { login } = useMainContext();
@@ -21,7 +21,7 @@ const Layout = ({ children, title = "Öz Twitter" }) => {
   return (
     <div className={styles.layout}>
       <Head>
-        <title>{title}</title>
+        <title>{title} / Öz Twitter</title>
         <meta name="viewport" content="initial-scale=1.0, width=device-width" />
       </Head>
       <div className={styles.header}>

@@ -6,7 +6,7 @@ import Feeds from '../components/feeds';
 
 export default function Home() {
   return (
-    <Layout title="Home / Öz Twitter">
+    <Layout title="Home">
       <div className={styles.main}>
         <div className={styles.content}>
           <Header text={"Home"} />

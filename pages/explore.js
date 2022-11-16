@@ -4,7 +4,7 @@ import Layout from '../components/layout/layout';
 
 const Explore = () => {
   return (
-    <Layout title="Explore / Öz Twitter">
+    <Layout title="Explore">
       <Header text={"Explore"} />
     </Layout>
   );

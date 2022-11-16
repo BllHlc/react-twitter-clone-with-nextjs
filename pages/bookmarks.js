@@ -4,7 +4,7 @@ import Layout from '../components/layout/layout';
 
 const Bookmarks = () => {
   return (
-    <Layout title="Bookmarks / Öz Twitter">
+    <Layout title="Bookmarks">
       <Header text={"Bookmarks"} />
     </Layout>
   );

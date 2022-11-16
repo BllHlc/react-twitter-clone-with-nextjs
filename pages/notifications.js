@@ -4,7 +4,7 @@ import Layout from '../components/layout/layout';
 
 const Notifications = () => {
   return (
-    <Layout title="Notifications / Öz Twitter">
+    <Layout title="Notifications">
       <Header text={"Notifications"} />
     </Layout>
   );
