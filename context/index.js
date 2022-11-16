@@ -84,7 +84,6 @@ const MainContextProvider = ({ children }) => {
       slug: user.displayName.replace(/ /g, "_").toLowerCase(),
       date: Date.now()
     };
-    console.log(newTweet);
     set(ref(database, "tweets/" + newTweet.date), newTweet);
   };
 
