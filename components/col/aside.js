@@ -28,6 +28,7 @@ const Aside = ({ login }) => {
                 options={{
                   height: '1500',
                 }}
+
               />
             </div>
           </> :
