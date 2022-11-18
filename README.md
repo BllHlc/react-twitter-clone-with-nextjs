@@ -56,8 +56,6 @@
 
 MIT
 
---
-
 ## Author
 
 Bilal Halıcı [Github](https://github.com/BllHlc)
