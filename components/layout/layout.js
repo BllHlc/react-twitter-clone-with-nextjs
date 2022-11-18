@@ -21,7 +21,7 @@ const Layout = ({ children, title }) => {
   return (
     <div className={styles.layout}>
       <Head>
-        <title>{title} / Öz Twitter</title>
+        <title>{title} / Twitter</title>
         <meta name="viewport" content="initial-scale=1.0, width=device-width" />
       </Head>
       <div className={styles.header}>
