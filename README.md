@@ -45,9 +45,9 @@
 ## Themes
 
 <div>
-  <img src="https://user-images.githubusercontent.com/77120913/202588788-5e3e6257-0748-4367-9881-73eadb43e60e.png" width="33%" />
-  <img src="https://user-images.githubusercontent.com/77120913/202588767-bb167e85-d7fd-4381-9b4c-563b845be61f.png" width="33%" />
-  <img src="https://user-images.githubusercontent.com/77120913/202588762-d7c3b79e-4aee-44bd-9bb9-b8b20ed2638b.png" width="33%" />
+  <img src="https://user-images.githubusercontent.com/77120913/202588788-5e3e6257-0748-4367-9881-73eadb43e60e.png" width="30%" />
+  <img src="https://user-images.githubusercontent.com/77120913/202588767-bb167e85-d7fd-4381-9b4c-563b845be61f.png" width="30%" />
+  <img src="https://user-images.githubusercontent.com/77120913/202588762-d7c3b79e-4aee-44bd-9bb9-b8b20ed2638b.png" width="30%" />
 </div>
 
 ---
