@@ -1,34 +1,71 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# Twitter Clone - ReactJS - NodeJS - Firebase
 
-## Getting Started
+### You can login with Google. And tweet real-time and other users can see your tweets. [See it live](https://react-twitter-clone-with-nextjs.vercel.app/) ↗
 
-First, run the development server:
+---
 
-```bash
-npm run dev
-# or
-yarn dev
-```
+## Dependencies And Technologies
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+- ReactJS
+- NextJS
+- Context API
+- Firebase - Realtime Database
+- Firebase - Authentication
+- Firebase - Storage
+- sass
+- css modules
+- classnames
 
-You can start editing the page by modifying `pages/index.js`. The page auto-updates as you edit the file.
+---
 
-[API routes](https://nextjs.org/docs/api-routes/introduction) can be accessed on [http://localhost:3000/api/hello](http://localhost:3000/api/hello). This endpoint can be edited in `pages/api/hello.js`.
+## Screenshots
 
-The `pages/api` directory is mapped to `/api/*`. Files in this directory are treated as [API routes](https://nextjs.org/docs/api-routes/introduction) instead of React pages.
+### Login Page
 
-## Learn More
+<img src="https://user-images.githubusercontent.com/77120913/202587451-d0e722c3-e5a6-4acc-83fb-8b3f68aaca88.png" width="800"/>
 
-To learn more about Next.js, take a look at the following resources:
+---
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+## Home Page - Tweet with image
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
+<img src="https://user-images.githubusercontent.com/77120913/202589432-2f56aec8-2134-4a22-b316-2702cb29dd93.png" width="800" />
 
-## Deploy on Vercel
+<br/>
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+---
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+## Theme Picker
+
+<img src="https://user-images.githubusercontent.com/77120913/202588778-2a2643d3-eebe-49a5-bd25-3aa0f8365237.png" width="800" />
+
+<br/>
+
+---
+
+## Themes
+
+<div>
+  <img src="https://user-images.githubusercontent.com/77120913/202588788-5e3e6257-0748-4367-9881-73eadb43e60e.png" width="33%" />
+  <img src="https://user-images.githubusercontent.com/77120913/202588767-bb167e85-d7fd-4381-9b4c-563b845be61f.png" width="33%" />
+  <img src="https://user-images.githubusercontent.com/77120913/202588762-d7c3b79e-4aee-44bd-9bb9-b8b20ed2638b.png" width="33%" />
+</div>
+
+---
+
+## License
+
+MIT
+
+--
+
+## Author
+
+Bilal Halıcı [Github](https://github.com/BllHlc)
+
+## Support
+
+If you like this project, please consider giving it a ⭐️ on Github and sharing it with your friends via social media.
+
+## Contact
+
+If you want to contact me you can reach me at [linkedin](https://www.linkedin.com/in/bilal-halici).
