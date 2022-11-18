@@ -1,6 +1,6 @@
 # Twitter Clone - ReactJS - NodeJS - Firebase
 
-### You can login with Google. And tweet real-time and other users can see your tweets. [See it live]([https://bllhlc-twitter.vercel.app/]) ↗
+### You can login with Google. And tweet real-time and other users can see your tweets. [See it live](https://bllhlc-twitter.vercel.app/) ↗
 
 ---
 
